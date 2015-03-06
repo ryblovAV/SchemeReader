@@ -17,23 +17,23 @@ object DBReader {
   val jdbcReader = ctx.getBean(classOf[JDBCTemplatesUtlImpl])
 
   def getTables = jdbcReader.query(sqlMaster){
-    (rs, rowNum) => Table(name = rs.getString("table_name"),
-                          owner = rs.getString("referenced_owner"),
-                          columns = List())
+    (rs, rowNum) => Table(
+      name = (rs,"table_name"),
+      owner = (rs,"referenced_owner"),
+      columns = List())
   }
 
   def getColumns(tableName: String) = {
     val m = mutable.Map("table_name" -> tableName)
     jdbcReader.queryWithParameters(sqlColumns,m){
       (rs,nn) => Column(name = (rs,"column_name"),
-                        dataType = (rs,"data_type"),
-                        defaultValue = (rs,"data_default"),
-                        dataLength = (rs,"data_length"),
-                        dataPrecision = (rs,"data_precision"),
-                        dataScale = (rs,"data_scale"),
-                        isPrimary = false)
+        dataType = (rs,"data_type"),
+        defaultValue = (rs,"data_default"),
+        dataLength = (rs,"data_length"),
+        dataPrecision = (rs,"data_precision"),
+        dataScale = (rs,"data_scale"),
+        pkPosition = (rs,"pk_position"))
     }
   }
-
 
 }

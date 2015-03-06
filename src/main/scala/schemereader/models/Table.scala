@@ -6,6 +6,6 @@ case class Column(name: String,
                   dataLength: Int,
                   dataPrecision: Option[Int],
                   dataScale: Option[Int],
-                  isPrimary: Boolean)
+                  pkPosition: Option[Int])
 
 case class Table(name: String, owner: String, columns: List[Column])
