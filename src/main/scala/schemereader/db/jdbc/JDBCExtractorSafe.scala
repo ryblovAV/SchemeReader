@@ -1,6 +1,7 @@
 package schemereader.db.jdbc
 
 import java.sql.ResultSet
+import scala.language.implicitConversions
 
 object JDBCExtractorSafe {
 

@@ -1,0 +1,6398 @@
+[
+  {
+    "name": "CI_ACCT_APAY",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "APAY_SRC_CD",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "EXT_ACCT_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "EXPIRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "ENTITY_NAME",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "APAY_MAX_WDRWL_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "APAY_METHOD_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "'C1DD' ",
+        "dataLength": 4
+      },
+      {
+        "name": "ENCR_EXT_ACCT_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 108
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ACCT_APAY_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_ACCT_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_PF_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "INTV_PF_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_MR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MTR_CONFIG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "READ_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "USE_ON_BILL_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "MR_SOURCE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "MTR_READER_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 20
+      },
+      {
+        "name": "MR_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MR_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_MR_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MR_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_EVENT_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "PAY_EVENT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_TNDR_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_TENDER_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_ADDR_OVRD",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "ADDRESS1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "NUM1",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "NUM2",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "COUNTY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "POSTAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "HOUSE_TYPE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "GEO_CODE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 11
+      },
+      {
+        "name": "IN_CITY_LIMIT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "STATE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "COUNTRY",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_DATA_SET",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "REG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "SET_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "REG_DS_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "REG_DS_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "REG_DS_EXT_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "REG_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "REG_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_MTR_EVT",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SP_MTR_EVT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "MTR_ON_OFF_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SP_MTR_HIST_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "SEQNO",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_ACCT_APAY_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "ACCT_APAY_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL_CHG",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "DESCR_ON_BILL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 80
+      },
+      {
+        "name": "BILLABLE_CHG_STAT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BILLABLE_CHG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL_SA",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10
+      },
+      {
+        "name": "CUR_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "TOT_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_BSEG",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_CYC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "WIN_START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CAN_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "CAN_BSEG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "EST_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "CLOSING_BSEG_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "SQ_OVERRIDE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "ITEM_OVERRIDE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "PREM_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "BSEG_STAT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "CRE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "STAT_CHG_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "REBILL_SEG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "MASTER_BSEG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "QUOTE_DTL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "BILL_SCNR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "MDM_START_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "MDM_END_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "BSEG_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_BSEG_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_PF_L",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "DESCR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_PF_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "LANGUAGE_CD",
+        "dataType": "CHAR",
+        "dataLength": 3,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_MR_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "MR_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR_CONFIG",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "EFF_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "MTR_CONFIG_TY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "MTR_CFG_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MTR_CONFIG_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "PAY_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_TNDR_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "PAY_TENDER_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PER",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "LANGUAGE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "PER_OR_BUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "LS_SL_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "LS_SL_DESCR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 1000
+      },
+      {
+        "name": "EMAILID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 70
+      },
+      {
+        "name": "OVRD_MAIL_NAME1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "OVRD_MAIL_NAME2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "OVRD_MAIL_NAME3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "NUM1",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "NUM2",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "COUNTY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "POSTAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "HOUSE_TYPE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "GEO_CODE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 11
+      },
+      {
+        "name": "IN_CITY_LIMIT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "STATE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "COUNTRY",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "RECV_MKTG_INFO_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "'NRCV' ",
+        "dataLength": 4
+      },
+      {
+        "name": "WEB_PASSWD",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "WEB_PWD_HINT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "WEB_PASSWD_ANS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      },
+      {
+        "name": "PER_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_REG",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "EFF_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "READ_SEQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "UOM_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "TOU_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "REG_CONST",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 12,
+        "dataScale": 6
+      },
+      {
+        "name": "CONSUM_SUB_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "HOW_TO_USE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "NBR_OF_DGTS_LFT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "NBR_OF_DGTS_RGT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "FULL_SCALE",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 7
+      },
+      {
+        "name": "READ_OUT_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "PROTOCOL_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "TOLERANCE",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 14,
+        "dataScale": 5
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "VIRTUAL_CHAN_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      },
+      {
+        "name": "INTV_REG_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "REG_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_SP_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_SP_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "SA_SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_MTR_HIST",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MTR_CONFIG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "REMOVAL_MR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "REMOVAL_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "INSTALL_CONST",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 12,
+        "dataScale": 6
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SP_MTR_HIST_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_ACCT",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_CYC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "SETUP_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "ACCT_MGMT_GRP_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "ALERT_INFO",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 4000
+      },
+      {
+        "name": "BILL_AFTER_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "PROTECT_CYC_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "CIS_DIVISION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 5
+      },
+      {
+        "name": "MAILING_PREM_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "PROTECT_PREM_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "COLL_CL_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "CR_REVIEW_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "POSTPONE_CR_RVW_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "INT_CR_REVIEW_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "CUST_CL_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BILL_PRT_INTERCEPT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "NO_DEP_RVW_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "BUD_PLAN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "PROTECT_DIV_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "ACCESS_GRP_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "ACCT_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_BSEG_CL_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "HEADER_SEQ",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "SEQNO",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_DEP_CTL_ST",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "DEP_CTL_STG_ST_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "DEP_CTL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "TRANSMIT_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "TOT_TNDR_CTL_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "TOT_TNDR_CTL_CNT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "LAST_UPDATE_INST",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "EXT_SOURCE_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 1
+      },
+      {
+        "name": "EXT_TRANSMIT_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_FT_GL",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "FT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "GL_SEQ_NBR",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "DST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "AMOUNT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "TOT_AMT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "GL_ACCT",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "STATISTIC_AMOUNT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 19,
+        "dataScale": 6
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_FT_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "FT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_DATA",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "INTV_DATA",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 7
+      },
+      {
+        "name": "TRN_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "INTV_DATA_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_ID",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PER_ID_NBR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 100
+      },
+      {
+        "name": "PRIM_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ENCR_PER_ID_NBR",
+        "dataType": "VARCHAR2",
+        "dataLength": 172
+      },
+      {
+        "name": "HASH_PER_ID_NBR",
+        "dataType": "VARCHAR2",
+        "dataLength": 88
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ID_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_DATA_SET_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "REG_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_READ",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "READ_SEQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "REG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "READ_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "REG_READING",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 6
+      },
+      {
+        "name": "LO_LIMIT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 6
+      },
+      {
+        "name": "HI_LIMIT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 6
+      },
+      {
+        "name": "REVIEW_HILO_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "TRENDED_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "REG_READ_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL_ROUTING",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "SEQNO",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "NBR_BILL_COPIES",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "BATCH_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BILL_FORMAT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "CUST_PO_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 20
+      },
+      {
+        "name": "ENTITY_NAME1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ENTITY_NAME2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ENTITY_NAME3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "COUNTRY",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "ADDRESS1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "NUM1",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "NUM2",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "HOUSE_TYPE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "COUNTY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "STATE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "POSTAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "GEO_CODE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 11
+      },
+      {
+        "name": "IN_CITY_LIMIT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "BATCH_NBR",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "EXTRACT_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "REPRINT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "NO_BATCH_PRT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "BILL_PRT_INTERCEPT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "BILL_RTE_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_FT",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "FT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "SIBLING_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "PARENT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "GL_DIVISION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 5
+      },
+      {
+        "name": "CIS_DIVISION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 5
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "FT_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "CUR_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "TOT_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CRE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "FREEZE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "FREEZE_USER_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "FREEZE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "ARS_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CORRECTION_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "REDUNDANT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "NEW_DEBIT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "SHOW_ON_BILL_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "NOT_IN_ARS_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "ACCOUNTING_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "XFERRED_OUT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "XFER_TO_GL_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "GL_DISTRIB_STATUS",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "SCHED_DISTRIB_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "BAL_CTL_GRP_ID",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "MATCH_EVT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_FT_PROC",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "FT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "BATCH_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BATCH_NBR",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "SPR_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "ADJ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_INTV_VAL",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "INTV_VAL",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 7
+      },
+      {
+        "name": "TRN_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_VAL_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "INTV_VAL_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_EVENT",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PAY_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CRE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "DOC_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_EVENT_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PREM",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PREM_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "CIS_DIVISION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 5
+      },
+      {
+        "name": "LL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "KEY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "KEY_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "OK_TO_ENTER_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "MR_INSTR_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "MR_INSTR_DETAILS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 250
+      },
+      {
+        "name": "MR_WARN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "TREND_AREA_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "ADDRESS1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "ADDRESS4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "MAIL_ADDR_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "NUM1",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "NUM2",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "COUNTY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "POSTAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "HOUSE_TYPE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "GEO_CODE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 11
+      },
+      {
+        "name": "IN_CITY_LIMIT",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "STATE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "COUNTRY",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADDRESS1_UPR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CITY_UPR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 90
+      },
+      {
+        "name": "TIME_ZONE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "LS_SL_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "LS_SL_DESCR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 1000
+      },
+      {
+        "name": "PRNT_PREM_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "PREM_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PREM_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_INTV_PF",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "END_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "EFF_STATUS",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "INTV_PF_REL_TYP_CD",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 2
+      },
+      {
+        "name": "INTV_PF_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 4
+      },
+      {
+        "name": "START_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SP",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "DISCON_LOC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "SP_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "PREM_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "SP_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "INSTALL_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "SP_SRC_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "MR_CYC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "MR_RTE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "MTR_LOC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "MR_CYC_RTE_SEQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 8,
+        "dataScale": 0
+      },
+      {
+        "name": "FAC_LVL_1_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "MTR_LOC_DETAILS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 4000
+      },
+      {
+        "name": "FAC_LVL_2_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "FAC_LVL_3_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "DESCRLONG",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 4000
+      },
+      {
+        "name": "ABOLISH_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "OVRD_PREM_FLD_INFO_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 4
+      },
+      {
+        "name": "MR_INSTR_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "MR_WARN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "KEY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 1
+      },
+      {
+        "name": "KEY_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "OK_TO_ENTER_SW",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 1
+      },
+      {
+        "name": "MR_INSTR_DETAILS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 250
+      },
+      {
+        "name": "SP_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_TNDR_CTL_ST",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "TND_CTL_STG_ST_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "TNDR_CTL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "TOT_TNDR_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "TOT_TNDR_CNT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 10,
+        "dataScale": 0
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "EXT_SOURCE_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 1
+      },
+      {
+        "name": "EXT_TRANSMIT_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 2
+      },
+      {
+        "name": "EXT_BATCH_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_BCHG_SQ",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "SQI_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "TOU_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "UOM_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "SVC_QTY",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BILLABLE_CHG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_BILL_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_BSEG_CALC",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "HEADER_SEQ",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "RS_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "BILLABLE_CHG_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "CALC_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "DESCR_ON_BILL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 80
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_BSEG_CALC_LN",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "HEADER_SEQ",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "SEQNO",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "DST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "UOM_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "TOU_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "RC_SEQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 4,
+        "dataScale": 0
+      },
+      {
+        "name": "PRT_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "APP_IN_SUMM_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "CALC_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "EXEMPT_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "BASE_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "SQI_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BILL_SQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "MSR_PEAK_QTY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "DESCR_ON_BILL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 80
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "AUDIT_CALC_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 5
+      },
+      {
+        "name": "CALC_GRP_CD",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "CALC_RULE_CD",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_BSEG_READ",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10
+      },
+      {
+        "name": "REG_CONST",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 12,
+        "dataScale": 6
+      },
+      {
+        "name": "SEQNO",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "USAGE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "USE_PCT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "HOW_TO_USE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "MSR_PEAK_QTY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "UOM_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "TOU_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "START_REG_READ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "START_READ_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "START_REG_READING",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 6
+      },
+      {
+        "name": "END_REG_READ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "END_READ_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "END_REG_READING",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 6
+      },
+      {
+        "name": "MSR_QTY",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "FINAL_UOM_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "FINAL_TOU_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "FINAL_REG_QTY",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "SQI_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "FINAL_SQI_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_INTV_DATA_SET",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "INTV_PF_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SET_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "SET_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "INTV_DS_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "INTV_DS_EXT_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      },
+      {
+        "name": "INTV_DS_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_DATA_SET_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "INTV_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR_CONFIG_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "MTR_CONFIG_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PAY_EVENT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "CAN_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "PAY_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "PAY_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "NON_CIS_NAME",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "NON_CIS_REF_NBR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "NON_CIS_COMMENT",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "MATCH_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "MATCH_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_PER",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "FINAN_REL_SW",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 1
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID1",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "PER_ID2",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 2
+      },
+      {
+        "name": "PER_REL_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 3
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 4
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_ACCT_PER",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "ACCT_REL_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BILL_ADDR_SRCE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "MAIN_CUST_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "FIN_RESP_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "THRD_PTY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "RECEIVE_COPY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "BILL_RTE_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "BILL_FORMAT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "NBR_BILL_COPIES",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 2,
+        "dataScale": 0
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CUST_PO_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 20
+      },
+      {
+        "name": "NOTIFY_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "NAME_PFX_SFX",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "PFX_SFX_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "QTE_RTE_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "RECV_QTE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 1
+      },
+      {
+        "name": "WEB_ACCESS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "'ALWD' ",
+        "dataLength": 4
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BADGE_NBR",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "MTR_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "MTR_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "MFG_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "MODEL_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "SERIAL_NBR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "RECEIVE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "RETIRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "DESCRLONG",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 4000
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "RETIRE_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "MTR_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_MTR_LOC_HIS",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "MTR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "LOC_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "LOC_HIST_TYP_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "SP_MTR_HIST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "STK_LOC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "MTR_LOC_HIST_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_SEG",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "PAY_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "PAY_SEG_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADJ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "MATCH_EVT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_SEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_TNDR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "PAYOR_ACCT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "TENDER_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "PAY_EVENT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "TNDR_CTL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "IN_TNDR_CTL_BAL_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "TENDER_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CHECK_NBR",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "TNDR_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "CAN_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "ADJ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "CUST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 36
+      },
+      {
+        "name": "MICR_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "NAME1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 40
+      },
+      {
+        "name": "EXT_REFERENCE_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 36
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ALT_CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "ALT_TENDER_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "ENCR_MICR_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 64
+      },
+      {
+        "name": "HASH_MICR_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 88
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_TENDER_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_TNDR_ST",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PAY_TND_STG_ST_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "PAY_TENDER_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "TENDER_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "ACCOUNTING_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "TENDER_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "CUST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 36
+      },
+      {
+        "name": "MICR_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "NAME1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 40
+      },
+      {
+        "name": "CHECK_NBR",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ENCR_MICR_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 64
+      },
+      {
+        "name": "HASH_MICR_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 88
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "EXT_SOURCE_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 1
+      },
+      {
+        "name": "EXT_TRANSMIT_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 2
+      },
+      {
+        "name": "EXT_BATCH_ID",
+        "dataType": "CHAR",
+        "dataLength": 30,
+        "pkPosition": 3
+      },
+      {
+        "name": "EXT_REFERENCE_ID",
+        "dataType": "CHAR",
+        "dataLength": 36,
+        "pkPosition": 4
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_PHONE",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PHONE_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "COUNTRY_CODE",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "PHONE",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 24
+      },
+      {
+        "name": "EXTENSION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 6
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PREM_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PREM_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_RS_HIST",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "RS_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_MTR_HIST_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "SP_MTR_HIST_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_ACCT_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_ADJ",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "ADJ_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "ADJ_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "CRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CAN_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "ADJ_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "XFER_ADJ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "BEHALF_SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "BASE_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "GEN_REF_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "APPR_REQ_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "ADJ_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "ADJ_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_ADJ_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "ADJ_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_BF_VAL",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "VAL",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BF_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "dataLength": 16,
+        "pkPosition": 3
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 5
+      },
+      {
+        "name": "TOU_GRP_CD",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 4
+      }
+    ]
+  },
+  {
+    "name": "CI_BSEG_SQ",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BSEG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12
+      },
+      {
+        "name": "UOM_CD",
+        "dataType": "CHAR",
+        "dataLength": 4
+      },
+      {
+        "name": "TOU_CD",
+        "dataType": "CHAR",
+        "dataLength": 8
+      },
+      {
+        "name": "SQI_CD",
+        "dataType": "CHAR",
+        "dataLength": 8
+      },
+      {
+        "name": "INIT_SQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "BILL_SQ",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 6
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": []
+  },
+  {
+    "name": "CI_B_CHG_LINE",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "DESCR_ON_BILL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 80
+      },
+      {
+        "name": "CHARGE_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "SHOW_ON_BILL_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "APP_IN_SUMM_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "DST_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "MEMO_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BILLABLE_CHG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "LINE_SEQ",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_VAL_SET",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BF_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "SET_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_VAL_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_PAY_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PAY_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PREM_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "PREM_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SA",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "PROP_DCL_RSN_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "PROP_SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "CIS_DIVISION",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 5
+      },
+      {
+        "name": "SA_TYPE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "START_OPT_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "SA_STATUS_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "OLD_ACCT_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 36
+      },
+      {
+        "name": "CUST_READ_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "ALLOW_EST_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "SIC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "CHAR_PREM_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "TOT_TO_BILL_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "CURRENCY_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 3
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "SA_REL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "STRT_RSN_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "STOP_RSN_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "STRT_REQED_BY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "STOP_REQED_BY",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "HIGH_BILL_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "INT_CALC_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CIAC_REVIEW_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "BUS_ACTIVITY_DESC",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 250
+      },
+      {
+        "name": "IB_SA_CUTOFF_TM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "IB_BASE_TM_DAY_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "ENRL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "SPECIAL_USAGE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "PROP_SA_STAT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "NBR_PYMNT_PERIODS",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      },
+      {
+        "name": "NB_RULE_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "EXPIRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "RENEWAL_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "NB_APAY_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "SA_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_CONT_QTY",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CONT_QTY",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 17,
+        "dataScale": 6
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CONT_QTY_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "EFFDT",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_SP_OP_AREA",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "OP_AREA_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "FS_CL_CD",
+        "dataType": "CHAR",
+        "dataLength": 5,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "BILL_CYC_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "WIN_START_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "ACCT_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "BILL_STAT_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "BILL_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "DUE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CRE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "COMPLETE_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "LATE_PAY_CHARGE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "LATE_PAY_CHARGE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "ALLOW_REOPEN_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "NEXT_CR_RVW_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "CR_NOTE_FR_BILL_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "ALT_BILL_ID",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 14,
+        "dataScale": 0
+      },
+      {
+        "name": "APAY_CRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "APAY_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "ARCHIVE_SW",
+        "dataType": "CHAR",
+        "defaultValue": "'N' ",
+        "dataLength": 1
+      },
+      {
+        "name": "APAY_STOP_USER_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 8
+      },
+      {
+        "name": "APAY_STOP_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "APAY_STOP_AMT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 15,
+        "dataScale": 2
+      },
+      {
+        "name": "APAY_STOP_CRE_DT",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "DOC_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 30
+      },
+      {
+        "name": "DOC_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "OFFCYC_BGEN_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "BILL_SIGN",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 400
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "BILL_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_BILL_CHG_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "BILLABLE_CHG_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_PF",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "INTV_PF_TYP_CD",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "INTV_PF_EXT_ID",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 60
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "INTV_PF_DATA_AREA",
+        "dataType": "CLOB",
+        "dataLength": 4000
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "INTV_PF_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      }
+    ]
+  },
+  {
+    "name": "CI_INTV_VAL_SET_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "INTV_VAL_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_PER_NAME",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "ENTITY_NAME",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "NAME_TYPE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 4
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "PRIM_NAME_SW",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 1
+      },
+      {
+        "name": "ENTITY_NAME_UPR",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "PER_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_CHAR",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "CHAR_VAL",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 16
+      },
+      {
+        "name": "ADHOC_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 254
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "CHAR_VAL_FK1",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK2",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK3",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK4",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "CHAR_VAL_FK5",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      },
+      {
+        "name": "SRCH_CHAR_VAL",
+        "dataType": "VARCHAR2",
+        "defaultValue": "' ' ",
+        "dataLength": 50
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "REG_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      },
+      {
+        "name": "CHAR_TYPE_CD",
+        "dataType": "CHAR",
+        "dataLength": 8,
+        "pkPosition": 2
+      },
+      {
+        "name": "SEQ_NUM",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "pkPosition": 3
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_DATA",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "INTV_REG_DATA",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 18,
+        "dataScale": 7
+      },
+      {
+        "name": "TRN_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "REG_DATA_SET_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "REG_DATA_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_REG_READ_K",
+    "owner": "STGADM",
+    "columns": [],
+    "pkColumns": [
+      {
+        "name": "REG_READ_ID",
+        "dataType": "CHAR",
+        "dataLength": 12,
+        "pkPosition": 1
+      },
+      {
+        "name": "ENV_ID",
+        "dataType": "NUMBER",
+        "dataLength": 22,
+        "dataPrecision": 6,
+        "dataScale": 0,
+        "pkPosition": 2
+      }
+    ]
+  },
+  {
+    "name": "CI_SA_SP",
+    "owner": "STGADM",
+    "columns": [
+      {
+        "name": "SP_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "SA_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 10
+      },
+      {
+        "name": "START_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "START_MR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "STOP_DTTM",
+        "dataType": "DATE",
+        "dataLength": 7
+      },
+      {
+        "name": "USAGE_FLG",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 2
+      },
+      {
+        "name": "STOP_MR_ID",
+        "dataType": "CHAR",
+        "defaultValue": "' ' ",
+        "dataLength": 12
+      },
+      {
+        "name": "VERSION",
+        "dataType": "NUMBER",
+        "defaultValue": "1 ",
+        "dataLength": 22,
+        "dataPrecision": 5,
+        "dataScale": 0
+      },
+      {
+        "name": "USE_PCT",
+        "dataType": "NUMBER",
+        "defaultValue": "0 ",
+        "dataLength": 22,
+        "dataPrecision": 3,
+        "dataScale": 0
+      }
+    ],
+    "pkColumns": [
+      {
+        "name": "SA_SP_ID",
+        "dataType": "CHAR",
+        "dataLength": 10,
+        "pkPosition": 1
+      }
+    ]
+  }
+]

@@ -2,7 +2,11 @@ package schemereader.db.sql
 
 object SQLBuilder {
 
-  val sqlMaster =
+  val sqlAllTables =
+//  s"""|select table_name,
+//      |       'STGADM' as referenced_owner
+//      |  from TEST_TRANSF_DEPENDENCY""".stripMargin
+
     s"""|select distinct
         |       t.referenced_name as table_name,
         |       t.referenced_owner
