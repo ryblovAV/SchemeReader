@@ -7,16 +7,29 @@ import scala.util.matching.Regex
 
 object GroupBuilder extends Logging {
 
-  case class KeyTable(name: String, owner: String, pkColumn: Column, embeddableTables: List[DBTable])
-
   def filterTablesWithKey(tables: List[DBTable]): List[KeyTable] =
     tables.filter(
       (t) => (tables.exists((t2) => t2.name == s"${t.name}_K")) && (t.pkColumns.size == 1)).map(
         (t) => KeyTable(t.name, t.owner, t.pkColumns(0), getEmbeddableTables(t.name, tables))
       )
 
-  def buildMapKey(keyTables: List[KeyTable]): Map[String, KeyTable] =
+  def buildMapKeyByColumn(keyTables: List[KeyTable]): Map[String, KeyTable] =
     keyTables.groupBy(_.pkColumn.name).map(m => (m._1 -> m._2(0)))
+
+  def buildMapKeyByName(keyTables: List[KeyTable]): Map[String, KeyTable] =
+    keyTables.groupBy(_.name).map(m => (m._1 -> m._2(0)))
+
+  //build map EmbeddableTableName -> PrimaryKeyColumnName
+  def buildMapPKByEmbTable(keyTables: List[KeyTable]):Map[String,String] = {
+    //Primary Key column name -> List embedded table name
+    val l:List[(String,String)] =
+      keyTables.map( //KeyTable -> (PrimaryKeyColumnName, List[EmbeddedTableName])
+        k => (k.pkColumn.name,k.embeddableTables.map(_.name))).map( //List[EmbeddedTableName,PrimaryKeyColumnName]
+          t => t._2.map((embeddedTableName) => (embeddedTableName,t._1))).flatten
+
+    l.groupBy(_._1).map(t => (t._1 -> t._2(0)._2))
+  }
+
 
   def isEmbeddable(p: Regex, tableName: String): Boolean =
     !p.findFirstIn(tableName).isEmpty
@@ -49,7 +62,7 @@ object GroupBuilder extends Logging {
       l match {
         case (keys,columns) =>
           getRelation(c, mapKeyTablesByColumn) match {
-            case Some(keyTable) => (RefManyToOne(keyTable.pkColumn,keyTable.name)::keys,columns)
+            case Some(keyTable) => (RefManyToOne(keyTable.pkColumn.name,keyTable.name)::keys,columns)
             case _ => (keys,c::columns)
           }
     }
@@ -58,7 +71,7 @@ object GroupBuilder extends Logging {
 
   }
 
-  def createTable(dbTable: DBTable, 
+  def createTable(dbTable: DBTable,
                   mapKeyTablesByColumn: Map[String,KeyTable],
                   mapKeyTablesByName: Map[String,KeyTable]):Table = {
     val (manyToOne,columns) = fillRelation(dbTable, mapKeyTablesByColumn)
@@ -70,52 +83,51 @@ object GroupBuilder extends Logging {
 
     Table(name = dbTable.name,
           owner = dbTable.owner,
+          embeddable = 0,
           columns = columns,
-          pkColumns = dbTable.columns,
-          embeddableTables = embeddableTables,
+          pkColumns = dbTable.pkColumns,
+          embeddedTables = embeddableTables,
           manyToOne = manyToOne,
           oneToMany = Nil
     )
   }
-  
-  def run(dbTables: List[DBTable]) = {
+
+  def createEmbeddableTable(dbTable: DBTable, mapPKByEmbeddedTable: Map[String,String]) = {
+    val pkColumnName = mapPKByEmbeddedTable(dbTable.name)
+    Table(name = dbTable.name,
+          owner = dbTable.owner,
+          embeddable = 1,
+          columns = dbTable.columns:::(dbTable.pkColumns.filter((c) => c.name != pkColumnName)),
+          pkColumns = Nil,
+          embeddedTables = Nil,
+          manyToOne = Nil,
+          oneToMany = Nil)
+  }
+
+  def fillOneToManyRelations(tableName: String, tables: List[Table]): List[RefOneToMany] = {
+    tables.filter((t) => t.manyToOne.exists((r) => r.tableName == tableName)).map((t) => RefOneToMany(tableName,t.name))
+  }
+
+  def run(dbTables: List[DBTable]):List[Table] = {
 
     val keyTables: List[KeyTable] = filterTablesWithKey(dbTables)
 
-    val mapKeyTablesByName: Map[String, KeyTable] = keyTables.groupBy(_.name).map(m => (m._1 -> m._2(0)))
+    val mapKeyTablesByName: Map[String, KeyTable] = buildMapKeyByName(keyTables)
 
-    val mapKeyTablesByColumn: Map[String, KeyTable] = buildMapKey(keyTables)
+    val mapKeyTablesByColumn: Map[String, KeyTable] = buildMapKeyByColumn(keyTables)
 
-    val mapEmbdTables: Map[String, _] = mapKeyTablesByColumn.values.map(_.embeddableTables).flatten.groupBy(_.name)
+    val mapEmbeddedTables: Map[String, _] = mapKeyTablesByColumn.values.map(_.embeddableTables).flatten.groupBy(_.name)
 
-    val (embeddableTables, tables) = dbTables.partition((t) => mapEmbdTables.contains(t.name))
+    val (dbTablesEmbd, dbTablesNotEmbd) = dbTables.partition((t) => mapEmbeddedTables.contains(t.name))
 
-    embeddableTables.foreach((t) => println(t.name))
+    val tables = dbTablesNotEmbd.map(createTable(_,mapKeyTablesByColumn,mapKeyTablesByName))
+    //add oneToMany relations
+    val tablesWithR =  tables.map((t) => t.copy(oneToMany = fillOneToManyRelations(t.name,tables)))
 
-    tables.map(createTable(_,mapKeyTablesByColumn,mapKeyTablesByName))
+    //build embeddable tables list
+    val embeddableTables = dbTablesEmbd.map((t) => createEmbeddableTable(t,buildMapPKByEmbTable(keyTables)))
+
+    tablesWithR:::embeddableTables
   }
 
-
-  /*
-
-
-
-    def fillEmbeddableTables(kt: TableWithKey, tables: List[Table]): TableKeyWithEmbeddable =
-      TableKeyWithEmbeddable(kt,GroupBuilder.getEmbeddableTables(kt.table.name,tables))
-
-    def findPKColumn(columns: List[Column]):List[Column] = columns.filter(!_.pkPosition.isEmpty)
-
-    def equal(t1: Table, t2: Table) = ((t1.name != t2.name) && (t1.owner != t2.owner))
-
-    def getManyToOneTable(table: Table, pkColumn: Column,  mTables: List[Table]):Option[Table] =
-      mTables.find((t) => findPKColumn(t.columns).exists((c) => c.name == pkColumn.name))
-
-  //  def fillManyToOneTable(tables: List[Table]) =
-
-
-
-
-
-    def getOneToManyTables(pkColumn: Column, tables: List[Table]) = tables.filter((t) => t.columns.exists((c) => checkColumn(c,pkColumn)))
-  */
 }

@@ -8,9 +8,9 @@ case class Column(name: String,
                   dataScale: Option[Int],
                   pkPosition: Option[Int])
 
-case class RefManyToOne(column: Column, tableName: String)
+case class RefManyToOne(columnName: String, tableName: String)
 
-case class RefOneToMany(columns: List[Column],tables: List[Table])
+case class RefOneToMany(oneTableName: String, manyTableName: String)
 
 case class DBTable(name: String,
                    owner: String,
@@ -23,9 +23,12 @@ case class EmbeddableTable(name: String,
 
 case class Table(name: String,
                  owner: String,
+                 embeddable: Int,
                  columns: List[Column],
                  pkColumns: List[Column],
-                 embeddableTables: List[DBTable],
+                 embeddedTables: List[DBTable],
                  manyToOne: List[RefManyToOne],
                  oneToMany: List[RefOneToMany])
+
+case class KeyTable(name: String, owner: String, pkColumn: Column, embeddableTables: List[DBTable])
 
