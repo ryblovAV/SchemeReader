@@ -97,9 +97,9 @@ object GroupBuilder extends Logging {
     Table(name = dbTable.name,
           owner = dbTable.owner,
           embeddable = 1,
-          columns = dbTable.columns:::(dbTable.pkColumns.filter((c) => c.name != pkColumnName)),
+          columns = dbTable.columns:::(dbTable.pkColumns.filter((c) => c.name != pkColumnName)).map((c)=>c.copy(pkPosition = None)),
           pkColumns = Nil,
-          embeddedTables = Nil,
+          embeddedTableNames = Nil,
           manyToOne = Nil,
           oneToMany = Nil)
   }
