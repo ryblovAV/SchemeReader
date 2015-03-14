@@ -24,7 +24,7 @@ object GroupBuilder extends Logging {
     //Primary Key column name -> List embedded table name
     val l:List[(String,String)] =
       keyTables.map( //KeyTable -> (PrimaryKeyColumnName, List[EmbeddedTableName])
-        k => (k.pkColumn.name,k.embeddableTables.map(_.name))).map( //List[EmbeddedTableName,PrimaryKeyColumnName]
+        k => (k.pkColumn.name,k.embeddedTables.map(_.name))).map( //List[EmbeddedTableName,PrimaryKeyColumnName]
           t => t._2.map((embeddedTableName) => (embeddedTableName,t._1))).flatten
 
     l.groupBy(_._1).map(t => (t._1 -> t._2(0)._2))
@@ -58,16 +58,16 @@ object GroupBuilder extends Logging {
         case Some(k) => Some(k)
       }
 
-    def add(l: (List[RefManyToOne],List[Column]), c: Column): (List[RefManyToOne],List[Column]) =
+    def addRefToList(l: (List[RefManyToOne],List[Column]), c: Column): (List[RefManyToOne],List[Column]) =
       l match {
         case (keys,columns) =>
           getRelation(c, mapKeyTablesByColumn) match {
-            case Some(keyTable) => (RefManyToOne(keyTable.pkColumn.name,keyTable.name)::keys,columns)
+            case Some(keyTable) => (RefManyToOne(c.name,keyTable.name)::keys,columns)
             case _ => (keys,c::columns)
           }
     }
 
-    table.columns.foldLeft((List[RefManyToOne](),List[Column]()))(add)
+    table.columns.foldLeft((List[RefManyToOne](),List[Column]()))(addRefToList)
 
   }
 
@@ -76,8 +76,8 @@ object GroupBuilder extends Logging {
                   mapKeyTablesByName: Map[String,KeyTable]):Table = {
     val (manyToOne,columns) = fillRelation(dbTable, mapKeyTablesByColumn)
 
-    val embeddableTables = mapKeyTablesByName.get(dbTable.name) match {
-      case Some(keyTable) => keyTable.embeddableTables
+    val embeddedTableNames = mapKeyTablesByName.get(dbTable.name) match {
+      case Some(keyTable) => keyTable.embeddedTables.map((t) => t.name)
       case _ => Nil
     }
 
@@ -86,7 +86,7 @@ object GroupBuilder extends Logging {
           embeddable = 0,
           columns = columns,
           pkColumns = dbTable.pkColumns,
-          embeddedTables = embeddableTables,
+          embeddedTableNames = embeddedTableNames,
           manyToOne = manyToOne,
           oneToMany = Nil
     )
@@ -116,7 +116,7 @@ object GroupBuilder extends Logging {
 
     val mapKeyTablesByColumn: Map[String, KeyTable] = buildMapKeyByColumn(keyTables)
 
-    val mapEmbeddedTables: Map[String, _] = mapKeyTablesByColumn.values.map(_.embeddableTables).flatten.groupBy(_.name)
+    val mapEmbeddedTables: Map[String, _] = mapKeyTablesByColumn.values.map(_.embeddedTables).flatten.groupBy(_.name)
 
     val (dbTablesEmbd, dbTablesNotEmbd) = dbTables.partition((t) => mapEmbeddedTables.contains(t.name))
 
