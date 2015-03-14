@@ -78,7 +78,7 @@ object TableParser {
     (JsPath \ "embeddable").write[Int] and
     (JsPath \ "columns").write[List[Column]] and
     (JsPath \ "pkColumns").write[List[Column]] and
-    (JsPath \ "embeddedTables").write[List[DBTable]] and
+    (JsPath \ "embeddedTables").write[List[String]] and
     (JsPath \ "manyToOne").write[List[RefManyToOne]] and
     (JsPath \ "oneToMany").write[List[RefOneToMany]]
     )(unlift(Table.unapply))
@@ -89,7 +89,7 @@ object TableParser {
     (JsPath \ "embeddable").read[Int] and
     (JsPath \ "columns").read[List[Column]] and
     (JsPath \ "pkColumns").read[List[Column]] and
-    (JsPath \ "embeddedTables").read[List[DBTable]] and
+    (JsPath \ "embeddedTables").read[List[String]] and
     (JsPath \ "manyToOne").read[List[RefManyToOne]] and
     (JsPath \ "oneToMany").read[List[RefOneToMany]]
     )(Table.apply _)

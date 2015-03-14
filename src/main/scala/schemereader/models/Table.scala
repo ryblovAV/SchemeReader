@@ -26,9 +26,9 @@ case class Table(name: String,
                  embeddable: Int,
                  columns: List[Column],
                  pkColumns: List[Column],
-                 embeddedTables: List[DBTable],
+                 embeddedTableNames: List[String],
                  manyToOne: List[RefManyToOne],
                  oneToMany: List[RefOneToMany])
 
-case class KeyTable(name: String, owner: String, pkColumn: Column, embeddableTables: List[DBTable])
+case class KeyTable(name: String, owner: String, pkColumn: Column, embeddedTables: List[DBTable])
 
