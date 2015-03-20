@@ -97,15 +97,16 @@ object GroupBuilder extends Logging {
     Table(name = dbTable.name,
           owner = dbTable.owner,
           embeddable = 1,
-          columns = dbTable.columns:::(dbTable.pkColumns.filter((c) => c.name != pkColumnName)).map((c)=>c.copy(pkPosition = None)),
-          pkColumns = Nil,
+          columns = dbTable.columns,
+          pkColumns = dbTable.pkColumns.filter((c) => c.name != pkColumnName),
           embeddedTableNames = Nil,
           manyToOne = Nil,
           oneToMany = Nil)
   }
 
   def fillOneToManyRelations(tableName: String, tables: List[Table]): List[RefOneToMany] = {
-    tables.filter((t) => t.manyToOne.exists((r) => r.tableName == tableName)).map((t) => RefOneToMany(tableName,t.name))
+    //tables.filter((t) => t.manyToOne.exists((r) => r.tableName == tableName)).map((t) => RefOneToMany(tableName,t.name))
+    tables.map((t) => t.manyToOne.filter(_.tableName == tableName).map((r) => RefOneToMany(tableName,t.name,r.columnName))).flatten
   }
 
   def run(dbTables: List[DBTable]):List[Table] = {

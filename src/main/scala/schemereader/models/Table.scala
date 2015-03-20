@@ -10,7 +10,7 @@ case class Column(name: String,
 
 case class RefManyToOne(columnName: String, tableName: String)
 
-case class RefOneToMany(oneTableName: String, manyTableName: String)
+case class RefOneToMany(oneTableName: String, manyTableName: String, columnName: String)
 
 case class DBTable(name: String,
                    owner: String,
